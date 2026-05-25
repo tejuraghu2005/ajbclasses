@@ -1,59 +1,59 @@
-package day10;
+package day9;
 
-class plane                                    // parent class
+class Plane
 {
     void takeoff()
     {
-        System.out.println("plane is taking off");
+        System.out.println("Plane is taking off");
     }
 
     void fly()
     {
-        System.out.println("plane is flying");
+        System.out.println("Plane is flying");
     }
 
     void land()
     {
-        System.out.println("plane is landing");
+        System.out.println("Plane is landing");
     }
 }
 
-class cargoplane extends plane
+class CargoPlane extends Plane
 {
     void fly()
     {
-        System.out.println("cargoplane is flying in low heights");
+        System.out.println("CargoPlane is flying in low heights");
     }
 
-    void carrycargo()
+    void carryCargo()
     {
-        System.out.println("cargoplane carries cargo");
+        System.out.println("CargoPlane carries cargo");
     }
 }
 
-class passengerplane extends plane
+class PassengerPlane extends Plane
 {
     void fly()
     {
-        System.out.println("passengerplane is flying at medium height");
+        System.out.println("PassengerPlane is flying at medium height");
     }
 
-    void carrypassengers()
+    void carryPassengers()
     {
-        System.out.println("passengerplane carries passengers");
+        System.out.println("PassengerPlane carries passengers");
     }
 }
 
-class flighterplane extends plane
+class FighterPlane extends Plane
 {
     void fly()
     {
-        System.out.println("flighterplane is flying at great heights");
+        System.out.println("FighterPlane is flying at great heights");
     }
 
-    void carryweapons()
+    void carryWeapons()
     {
-        System.out.println("flighterplane is carrying weapons");
+        System.out.println("FighterPlane is carrying weapons");
     }
 }
 
@@ -61,22 +61,26 @@ public class LaunchPlane
 {
     public static void main(String[] args)
     {
-        cargoplane cp = new cargoplane();
+        CargoPlane cp = new CargoPlane();
         cp.takeoff();
         cp.fly();
         cp.land();
-        cp.carrycargo();
+        cp.carryCargo();
 
-        passengerplane pp = new passengerplane();
+        System.out.println();
+
+        PassengerPlane pp = new PassengerPlane();
         pp.takeoff();
         pp.fly();
         pp.land();
-        pp.carrypassengers();
+        pp.carryPassengers();
 
-        flighterplane fp = new flighterplane();
+        System.out.println();
+
+        FighterPlane fp = new FighterPlane();
         fp.takeoff();
         fp.fly();
         fp.land();
-        fp.carryweapons();
+        fp.carryWeapons();
     }
 }
